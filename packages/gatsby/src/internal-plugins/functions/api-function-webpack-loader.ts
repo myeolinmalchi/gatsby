@@ -11,7 +11,8 @@ const APIFunctionLoader: LoaderDefinition = async function () {
   const preferDefault = m => (m && m.default) || m
 
   const functionModule = require('${modulePath}');
-  const functionToExecute = preferDefault(functionModule);
+  //const functionToExecute = preferDefault(functionModule);
+  const functionToExecute = functionModule;
   const matchPath = '${matchPath}';
   const { match: reachMatch } = require('@gatsbyjs/reach-router');
   const { urlencoded, text, json, raw } = require('body-parser')
